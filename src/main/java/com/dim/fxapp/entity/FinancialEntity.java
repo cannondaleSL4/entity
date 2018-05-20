@@ -1,9 +1,7 @@
 package com.dim.fxapp.entity;
 
-import com.dim.fxapp.entity.impl.Quotes;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import java.io.Serializable;

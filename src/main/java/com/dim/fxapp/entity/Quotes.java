@@ -1,4 +1,4 @@
-package com.dim.fxapp.entity.impl;
+package com.dim.fxapp.entity;
 
 import com.dim.fxapp.entity.FinancialEntity;
 import com.dim.fxapp.entity.converter.LocalDateTimeConverter;
@@ -17,14 +17,15 @@ import java.time.LocalDateTime;
 /**
  * Created by dima on 28.11.17.
  */
-@Entity
-@Getter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name ="quotes")
+//@Entity
+//@Getter
+//@Builder
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Table(name ="quotes")
+@MappedSuperclass
 @JsonTypeName("quotes")
-public class Quotes implements FinancialEntity{
+public abstract class Quotes implements FinancialEntity{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter
