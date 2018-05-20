@@ -23,18 +23,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name ="quotes")
-//@JsonIdentityInfo(
-//        generator = ObjectIdGenerators.IntSequenceGenerator.class,
-//        property = "oid"
-//)
-//@JsonTypeInfo(use = JsonTypeInfo.Id.NAME,
-//        include = JsonTypeInfo.As.PROPERTY,
-//        property = "@class")
+@JsonTypeName("quotes")
 public class Quotes implements FinancialEntity{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter
-    @JsonIgnore
+    @JsonProperty("id")
     private Integer id;
 
     @Column(name="currency", nullable = false)
