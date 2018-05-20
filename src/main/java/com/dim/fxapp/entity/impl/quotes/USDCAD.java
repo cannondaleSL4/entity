@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by dima on 20.05.18.
@@ -16,5 +17,6 @@ import javax.persistence.Entity;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "USDCAD")
 public class USDCAD extends Quotes {
 }

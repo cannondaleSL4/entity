@@ -1,13 +1,9 @@
 package com.dim.fxapp.entity;
 
-import com.dim.fxapp.entity.FinancialEntity;
 import com.dim.fxapp.entity.converter.LocalDateTimeConverter;
 import com.dim.fxapp.entity.enums.Period;
 import com.fasterxml.jackson.annotation.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
