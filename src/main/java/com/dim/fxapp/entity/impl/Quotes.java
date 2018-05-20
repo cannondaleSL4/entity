@@ -42,7 +42,7 @@ public class Quotes implements FinancialEntity{
     @JsonFormat
         (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
     @Convert(converter = LocalDateTimeConverter.class)
-    private LocalDateTime date;
+    private LocalDateTime data;
 
     @Column(name="open", nullable = false)
     private BigDecimal open;
