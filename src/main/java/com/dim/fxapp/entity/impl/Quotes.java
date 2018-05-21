@@ -8,6 +8,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.index.CompoundIndex;
+import org.springframework.data.mongodb.core.index.CompoundIndexes;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -23,10 +27,18 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Document
+@CompoundIndexes({
+        @CompoundIndex(name = "name_period_data_idx",
+                unique = true,
+                def = "{'currency' : 1, 'period' : 1, 'data' : 1}")
+})
 public class Quotes implements FinancialEntity{
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private BigInteger id;
 
+    @Indexed(name = "name_index")
     private String currency;
 
     @Enumerated(EnumType.STRING)
