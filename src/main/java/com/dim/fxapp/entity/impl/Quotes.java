@@ -11,9 +11,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 
-/**
- * Created by dima on 28.11.17.
- */
+
 @Entity
 @Getter
 @Builder
