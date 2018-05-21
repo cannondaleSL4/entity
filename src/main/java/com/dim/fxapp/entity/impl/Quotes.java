@@ -23,11 +23,8 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name ="quotes")
-@JsonTypeName("quotes")
 public class Quotes implements FinancialEntity{
     @Id
-    @JsonProperty("id")
     private BigInteger id;
 
     private String currency;
