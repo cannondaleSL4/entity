@@ -15,9 +15,6 @@ import java.io.Serializable;
         generator = ObjectIdGenerators.IntSequenceGenerator.class,
         property = "id"
 )
-//@JsonTypeInfo(use = JsonTypeInfo.Id.NAME,
-//        include = JsonTypeInfo.As.EXISTING_PROPERTY,
-//        property = "clazz")
 @JsonSubTypes({ @JsonSubTypes.Type(name = "quotes", value = Quotes.class) })
 public interface FinancialEntity extends Serializable {
 
