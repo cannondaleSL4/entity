@@ -16,7 +16,7 @@ import java.util.Set;
 @Data
 public class QuotesCriteriaBuilder<D extends LocalDate, C extends Currency, P extends Period> {
     @Getter(AccessLevel.NONE)
-    private final Set<P> period = new HashSet<>(Arrays.<P>asList((P[]) Period.values()));
+    private P period;
     private C currency;
     private D from;
     private D to;
