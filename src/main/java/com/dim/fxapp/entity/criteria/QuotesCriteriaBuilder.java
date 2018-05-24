@@ -5,9 +5,6 @@ import com.dim.fxapp.entity.enums.Period;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by dima on 07.05.18.
