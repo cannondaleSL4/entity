@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @Builder
 @Data
 public class QuotesCriteriaBuilder<D extends LocalDate, C extends Currency, P extends Period> {
-    @Getter(AccessLevel.NONE)
     private P period;
     private C currency;
     private D from;
