@@ -19,7 +19,7 @@ public enum Period {
         this.period = period;
     }
 
-    public static Integer getCodeByPerios(String periodName) {
+    public static Integer getCodeByPeriod(String periodName) {
         for(Period e : values()) {
             if(e.period.equals(periodName)) return e.timeCode;
         }
