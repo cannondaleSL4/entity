@@ -12,16 +12,16 @@ public enum Period {
     MONTH ("1mo",10);
 
     private final String period;
-    private final Integer timeParametr;
+    private final Integer timeCode;
 
     private Period (final String period, Integer timeParametr){
-        this.timeParametr=timeParametr;
+        this.timeCode =timeParametr;
         this.period = period;
     }
 
-    public static Integer getByCurrensy(String name) {
+    public static Integer getCodeByPerios(String periodName) {
         for(Period e : values()) {
-            if(e.period.equals(name)) return e.timeParametr;
+            if(e.period.equals(periodName)) return e.timeCode;
         }
         return 0;
     }
