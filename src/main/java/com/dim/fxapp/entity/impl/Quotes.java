@@ -4,10 +4,7 @@ import com.dim.fxapp.entity.FinancialEntity;
 import com.dim.fxapp.entity.converter.LocalDateTimeConverter;
 import com.dim.fxapp.entity.enums.Period;
 import com.fasterxml.jackson.annotation.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -24,6 +21,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Table(name ="quotes")
 @JsonTypeName("quotes")
+@EqualsAndHashCode
+@ToString
 public class Quotes implements FinancialEntity{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
