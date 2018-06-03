@@ -41,8 +41,7 @@ public class Quotes implements FinancialEntity{
     @Indexed(name = "name_index")
     private String currency;
 
-    @Enumerated(EnumType.STRING)
-    private Period period;
+    private String period;
 
     @JsonFormat
         (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")

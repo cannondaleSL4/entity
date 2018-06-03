@@ -4,12 +4,12 @@ package com.dim.fxapp.entity.enums;
  * Created by dima on 04.12.17.
  */
 public enum Period {
-    FIVEMINUTES ("5m",3),
-    FIVETEENMINUTES ("15m",5),
-    ONEHOUR("1h",7),
-    DAY ("1d",8),
-    WEEK ("1w",9),
-    MONTH ("1mo",10);
+    FIVEMINUTES ("5",3),
+    FIVETEENMINUTES ("15",5),
+    ONEHOUR("60",7),
+    DAY ("D",8),
+    WEEK ("W",9),
+    MONTH ("M",10);
 
     private final String period;
     private final Integer timeCode;
