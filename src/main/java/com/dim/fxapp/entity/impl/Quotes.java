@@ -2,7 +2,6 @@ package com.dim.fxapp.entity.impl;
 
 import com.dim.fxapp.entity.FinancialEntity;
 import com.dim.fxapp.entity.converter.LocalDateTimeConverter;
-import com.dim.fxapp.entity.enums.Period;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
@@ -15,11 +14,6 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 
-
-
-/**
- * Created by dima on 28.11.17.
- */
 @Entity
 @Getter
 @Builder
