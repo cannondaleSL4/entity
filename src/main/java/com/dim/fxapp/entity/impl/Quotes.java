@@ -15,7 +15,6 @@ import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,8 +24,7 @@ import java.time.LocalDateTime;
                 unique = true,
                 def = "{'currency' : 1, 'period' : 1, 'data' : 1}")
 })
-@ToString
-@EqualsAndHashCode
+@Data
 public class Quotes implements FinancialEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
