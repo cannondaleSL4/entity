@@ -1,8 +1,5 @@
 package com.dim.fxapp.entity.enums;
 
-/**
- * Created by dima on 02.12.17.
- */
 public enum Currency {
     GBPAUD ("GBPAUD",181412),
     GBPJPY ("GBPJPY",181386),
